@@ -3,10 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My GitHub Page</title>
+    <title>My Personal Homepage</title>
+    <!-- 引入谷歌字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* 通用样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        /* 导航栏样式 */
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 15px;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        /* 横幅样式 */
+        .banner {
+            background-image: url('https://via.placeholder.com/1920x600'); /* 替换为你的背景图片链接 */
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 0 2rem;
+        }
+        .banner h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px #000;
+        }
+        .content {
+            padding: 2rem;
+            max-width: 800px;
+            margin: auto;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: -50px;
+            position: relative;
+            z-index: 10;
+        }
+        .content h2 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        .content p {
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>This is my personal GitHub page.</p>
+    <!-- 导航栏 -->
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- 横幅 -->
+    <div class="banner">
+        <h1>Welcome to My Personal Homepage</h1>
+    </div>
+
+    <!-- 内容部分 -->
+    <div class="content">
+        <h2>About Me</h2>
+        <p>Hello! I'm a web developer and designer. I love creating beautiful and functional websites.</p>
+        <p>This is a simple personal homepage created using HTML and CSS. Feel free to explore and get to know more about me!</p>
+    </div>
+
+    <!-- 页脚 -->
+    <div class="footer">
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </div>
 </body>
 </html>
