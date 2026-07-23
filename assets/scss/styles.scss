@@ -1254,8 +1254,8 @@ img {
   }
 
   .game-hero {
-    height: 850px;
-    min-height: 850px;
+    height: max(760px, calc(100svh - 70px));
+    min-height: 0;
   }
 
   .world-backdrop {
@@ -1315,8 +1315,14 @@ img {
 
   .player-zone {
     right: 5px;
-    bottom: 24px;
-    width: min(52vw, 205px);
+    bottom: 6px;
+    width: clamp(160px, 38vw, 235px);
+  }
+
+  .player-name {
+    right: 4%;
+    left: 4%;
+    white-space: nowrap;
   }
 
   .quest-bubble {
@@ -1329,15 +1335,6 @@ img {
   }
 
   .game-tip {
-    right: auto;
-    bottom: 12px;
-    left: 16px;
-    transform: none;
-  }
-
-  .game-tip kbd,
-  .game-tip b,
-  .game-tip span:first-of-type {
     display: none;
   }
 
@@ -1403,8 +1400,8 @@ img {
 
 @media (max-width: 420px) {
   .game-hero {
-    height: 820px;
-    min-height: 820px;
+    height: max(710px, calc(100svh - 70px));
+    min-height: 0;
   }
 
   .game-dialog {
@@ -1431,7 +1428,18 @@ img {
   }
 
   .player-zone {
-    width: 195px;
+    right: 6px;
+    bottom: 6px;
+    width: min(44vw, 176px);
+  }
+
+  .player-name {
+    padding-inline: 8px;
+    font-size: 9px;
+  }
+
+  .player-name small {
+    font-size: 6px;
   }
 }
 
