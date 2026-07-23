@@ -1,427 +1,230 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="zh-CN">
 <head>
-    <title>Bootstrap Portfolio/Resume Theme for Developers</title>
-    <!-- Meta -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Boootstrap Portfolio/Resume Theme for Developers">
-    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
-    <link rel="shortcut icon" href="favicon.ico">  
-    
-    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
-    
-    <!-- FontAwesome JS -->
-    <script defer src="assets/fontawesome/js/all.js"></script>
-    
-    <!-- Global CSS -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">  
-    
-    <!-- github calendar css -->
-    <link rel="stylesheet" href="assets/plugins/github-calendar/dist/github-calendar-responsive.css">
-    <!-- github activity css -->  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">  
-    <link rel="stylesheet" href="assets/plugins/github-activity/src/github-activity.css">
-
-    <!-- Theme CSS -->  
-    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
-    
-</head> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="游戏开发者熊振祥的个人博客，记录玩法系统、图形性能、开发工具与持续思考。">
+    <meta name="author" content="熊振祥">
+    <meta name="theme-color" content="#f7f8f3">
+    <meta property="og:title" content="熊振祥 · 个人博客">
+    <meta property="og:description" content="做游戏，也记录从想法到可玩体验的每一步。">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/profile.png">
+    <title>熊振祥 · 个人博客</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
 
 <body>
-    <!-- ******HEADER****** --> 
-    <header class="header">
-        <div class="container">     
-	        <div class="row align-items-center">
-			    <div class="col">         
-		            <img class="profile-image img-fluid float-start rounded-circle" src="assets/images/profile.png" alt="profile image" />
-		            <div class="profile-content">
-		                <h1 class="name">James Lee</h1>
-		                <h2 class="desc">Web App Developer</h2>   
-		                <ul class="social list-inline">
-		                    <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-		                    <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-		                    <li class="list-inline-item"><a href="#"><i class="fab fa-github-alt"></i></a></li>    
-		                    <li class="list-inline-item"><a href="#"><i class="fab fa-stack-overflow"></i></a></li>   
-		                    <li class="list-inline-item last-item"><a href="#"><i class="fab fa-codepen"></i></a></li>                
-		                </ul> 
-		            </div><!--//profile-->
-			    </div><!--//col-->
-	            <div class="col-12 col-md-auto">
-		            <div class="dark-mode-switch d-flex">
-						<div class="form-check form-switch mx-auto mx-md-0">
-							<input type="checkbox" class="form-check-input me-2" id="darkSwitch" />
-							<label class="custom-control-label" for="darkSwitch">Dark Mode</label>
-						</div>
-			        </div><!--//dark-mode-switch-->
-	                <a class="btn btn-cta-primary" href="#" target="_blank"><i class="fas fa-paper-plane"></i> Contact Me</a>        
-	            </div><!--//col-->
-	        </div><!--//row-->         
-        </div><!--//container-->
-    </header><!--//header-->
-    
-    <div class="container sections-wrapper py-5">
-        <div class="row">
-            <div class="primary col-lg-8 col-12">
-                <section class="about section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">About Me</h2>
-                        <div class="content">
-                            <p>Write a brief intro about yourself. It's a good idea to include your personal interests and hobbies as well. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec. Commodo ligula eget dolor. Aenean massa.</p>
-                         
-                        </div><!--//content-->
-                    </div><!--//section-inner-->                 
-                </section><!--//section-->
-    
-               <section class="latest section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Latest Projects</h2>
-                        <div class="content">    
-                                               
-                            <div class="item featured text-center">
-                                
-                                <div class="featured-image has-ribbon">
-                                    <a href="http://www.mobanwang.com" target="_blank">
-                                    <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/project-featured.jpg" alt="project name" />
-                                    </a>
-                                    <div class="ribbon">
-                                        <div class="text">New</div>
-                                    </div>
-                                </div>
-                                
-                                <h3 class="title mb-3"><a href="http://www.mobanwang.com" target="_blank">Launch - The perfect Bootstrap template for SaaS products</a></h3>
-                                    
-                                <div class="desc text-start">                                    
-                                    <p>You can promote your main project here. Suspendisse in tellus dolor. Vivamus a tortor eu turpis pharetra consequat quis non metus. Aliquam aliquam, orci eu suscipit pellentesque, mauris dui tincidunt enim, eget iaculis ante dolor non turpis. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
-                                </div><!--//desc-->         
-                                <a class="btn btn-cta-secondary" href="http://www.mobanwang.com" target="_blank"><i class="fas fa-thumbs-up"></i> Back my project</a>                 
-                            </div><!--//item-->
-                            <hr class="divider" />
-                            <div class="item row">
-                                <a class="col-md-4 col-12" href="http://www.mobanwang.com" target="_blank">
-                                <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/project-1.png" alt="project name" />
-                                </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a href="http://www.mobanwang.com" target="_blank">CoderPro - Boootstrap Startup Template For Software Projects</a></h3>
-                                    <p class="mb-2">You can put one of your secondary projects here. Suspendisse in tellus dolor. Vivamus a tortor eu turpis pharetra consequat quis non metus. Aliquam aliquam, orci eu suscipit pellentesque, mauris dui tincidunt enim, eget iaculis ante dolor non turpis.</p>
-                                    <p><a class="more-link" href="http://www.mobanwang.com" target="_blank"><i class="fas fa-external-link-alt"></i>Find out more</a></p>
-                                </div><!--//desc-->                          
-                            </div><!--//item-->
-                            
-                            <div class="item row">
-                                <a class="col-md-4 col-12" href="http://www.mobanwang.com" target="_blank">
-                                <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/project-2.png" alt="project name" />
-                                </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a href="http://www.mobanwang.com" target="_blank">DevCard - Boootstrap Portfolio Template for Software Developers</a></h3>
-                                    <p class="mb-2">You can put one of your secondary projects here. Suspendisse in tellus dolor. Vivamus a tortor eu turpis pharetra consequat quis non metus. Aliquam aliquam, orci eu suscipit pellentesque, mauris dui tincidunt enim, eget iaculis ante dolor non turpis.</p>
-                                    <p><a class="more-link" href="http://www.mobanwang.com" target="_blank"><i class="fas fa-external-link-alt"></i>Find out more</a></p>
-                                </div><!--//desc-->                          
-                            </div><!--//item-->
-                            
-                             <div class="item row">
-                                <a class="col-md-4 col-12" href="http://www.mobanwang.com" target="_blank">
-                                <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/project-3.png" alt="project name" />
-                                </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a href="http://www.mobanwang.com" target="_blank">Instance - Boootstrap Portfolio Template for Aspiring Full Stack Developers</a></h3>
-                                    <p class="mb-2">You can put one of your secondary projects here. Suspendisse in tellus dolor. Vivamus a tortor eu turpis pharetra consequat quis non metus. Aliquam aliquam, orci eu suscipit pellentesque, mauris dui tincidunt enim, eget iaculis ante dolor non turpis.</p>
-                                    <p><a class="more-link" href="http://www.mobanwang.com" target="_blank"><i class="fas fa-external-link-alt"></i>Find out more</a></p>
-                                </div><!--//desc-->                          
-                            </div><!--//item-->
-                            
-                            <div class="item row">
-                                <a class="col-md-4 col-12" href="http://www.mobanwang.com" target="_blank">
-                                <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/project-4.png" alt="project name" />
-                                </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a href="http://www.mobanwang.com" target="_blank">Nova Pro - Boootstrap Template for Mobile Startups</a></h3>
-                                    <p class="mb-2">You can put one of your secondary projects here. Suspendisse in tellus dolor. Vivamus a tortor eu turpis pharetra consequat quis non metus.</p>
-                                    <p><a class="more-link" href="http://www.mobanwang.com" target="_blank"><i class="fas fa-external-link-alt"></i>Find out more</a></p>
-                                </div><!--//desc-->                          
-                            </div><!--//item-->                            
-                            <div class="item row">
-                                <a class="col-md-4 col-12" href="http://www.mobanwang.com" target="_blank">
-                                <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/project-5.png" alt="project name" />
-                                </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a href="http://www.mobanwang.com" target="_blank">DevStudio - Boootstrap Template for WebDev Agencies and Freelance Developers</a></h3>
-                                    <p class="mb-2"> You can put one of your secondary projects here. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.</p>
-                                    <p><a class="more-link" href="http://www.mobanwang.com" target="_blank"><i class="fas fa-external-link-alt"></i>Find out more</a></p>
-                                </div><!--//desc-->                          
-                            </div><!--//item-->
-                            
-                        </div><!--//content-->  
-                    </div><!--//section-inner-->                
-                </section><!--//section-->
-                
-                <section class="projects section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Other Projects</h2>
-                        <div class="content">
-                            <div class="item">
-                                <h3 class="title"><a href="http://www.mobanwang.com" target="_blank">Pillar - Free Boootstrap Resume/CV Template for Developers</a> <span class="badge badge-theme">Free</span></h3>
-                                <p class="summary">Provide a brief description of your project. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatu.</p>
-                                <p><a class="more-link" href="http://www.mobanwang.com" target="_blank"><i class="fas fa-external-link-alt"></i>Download Now</a></p>
-                            </div><!--//item-->
-                            <div class="item">
-                                <h3 class="title"><a href="http://www.mobanwang.com" target="_blank">DevBlog - Free Boootstrap Blog Template for Developers</a> <span class="badge badge-theme">Free</span></h3>
-                                <p class="summary">Provide a brief description of your project. Maecenas ornare ultricies risus, in fermentum augue consectetur in. Vestibulum vitae mauris iaculis, sollicitudin velit in, molestie nulla. </p>
-                                <p><a class="more-link" href="http://www.mobanwang.com" target="_blank"><i class="fas fa-external-link-alt"></i>Download Now</a></p>
-                            </div><!--//item-->
-                            <div class="item">
-                                <h3 class="title"><a href="http://www.mobanwang.com" target="_blank">Nova - Free App Landing Page Template for App Developers</a> <span class="badge badge-theme">Free</span></h3>
-                                <p class="summary">Provide a brief description of your project. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel purus enim. Etiam tortor felis, fermentum ac ultrices sed.</p>
-                                <p><a class="more-link" href="http://www.mobanwang.com" target="_blank"><i class="fas fa-external-link-alt"></i>Download Now</a></p>
-                            </div><!--//item-->
-                            
-                            <a class="btn btn-cta-secondary" href="#">More on GitHub <i class="fas fa-chevron-right pt-1"></i></a>
-                            
-                        </div><!--//content-->  
-                    </div><!--//section-inner-->                 
-                </section><!--//section-->
-                
-                <section class="experience section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Work Experience</h2>
-                        <div class="content">
-                            <div class="item">
-                                <h3 class="title">Co-Founder & Lead Developer - <span class="place"><a href="#">Startup Hub</a></span> <span class="year">(2022 - Present)</span></h3>
-                                <p>Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt.</p>
-                            </div><!--//item-->
-                            <div class="item">
-                                <h3 class="title">Software Engineer - <span class="place"><a href="#">Google</a></span> <span class="year">(2019 - 2022)</span></h3>
-                                <p>Vivamus a tortor eu turpis pharetra consequat quis non metus. Aliquam aliquam, orci eu suscipit pellentesque, mauris dui tincidunt enim. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.</p>
-                            </div><!--//item-->
-                            
-                            <div class="item">
-                                <h3 class="title">Software Engineer - <span class="place"><a href="#">eBay</a></span> <span class="year">(2018 - 2019)</span></h3>
-                                <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.</p>
-                            </div><!--//item-->
-                            
-                        </div><!--//content-->  
-                    </div><!--//section-inner-->                 
-                </section><!--//section-->
-                <section class="github section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">My GitHub</h2>
-                        <p>You can embed your GitHub contribution graph calendar using IonicaBizau's <a href="https://github.com/IonicaBizau/github-calendar" target="_blank">GitHub Calendar</a> widget. 
-                        
-                        <div id="github-graph" class="github-graph">
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
 
-                        </div><!--//github-graph-->
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="brand" href="#top" aria-label="返回首页">
+                <span class="brand-mark" aria-hidden="true"><img src="assets/images/profile.png" alt=""></span>
+                <span>CookieBear</span>
+            </a>
 
-                        <p>You can also embed your GitHub activities using Casey Scarborough's <a href="https://github.com/caseyscarborough/github-activity" target="_blank">GitHub Activity Stream</a> widget.        
-                        <!--//Usage: https://caseyscarborough.com/projects/github-activity/ -->                       
-                        <div id="ghfeed" class="ghfeed">
-                        </div><!--//ghfeed-->
-                        
-                    </div><!--//secton-inner-->
-                </section><!--//section-->
-            </div><!--//primary-->
-            <div class="secondary col-lg-4 col-12">
-                 <aside class="info aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading sr-only">Basic Information</h2>
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-map-marker-alt"></i><span class="sr-only">Location:</span>San Francisco, US</li>
-                                <li><i class="fas fa-envelope"></i><span class="sr-only">Email:</span><a href="#">jameslee@website.com</a></li>
-                                <li><i class="fas fa-link"></i><span class="sr-only">Website:</span><a href="#">https://www.website.com</a></li>
-                            </ul>
-                        </div><!--//content-->  
-                    </div><!--//section-inner-->                 
-                </aside><!--//aside-->
-                
-                <aside class="skills aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Skills</h2>
-                        <div class="content">
-                            <p class="intro">
-                                Intro about your skills goes here. Keep the list lean and only show your primary skillset. You can always provide a link to your Linkedin or Github profile so people can get more info there.</p>
-                            
-                            <div class="skillset">
-                               
-                                <div class="item">
-                                    <h3 class="level-title">Python &amp; Django<span class="level-label" data-bs-toggle="tooltip" data-bs-placement="left" title="You can use the tooltip to explain more about your skill level..."><i class="fas fa-info-circle"></i>Expert</span></h3>
+            <nav class="site-nav" aria-label="主导航">
+                <a class="active" href="#top">首页</a>
+                <a href="#writing">写作</a>
+                <a href="#projects">项目</a>
+                <a href="#about">关于</a>
+            </nav>
 
-                                    <div class="level-bar progress">
-									    <div class="progress-bar level-bar-inner" role="progressbar" style="width: 96%" aria-valuenow="96"  aria-valuemin="0" aria-valuemax="96"></div>
-									</div><!--//level-bar-->                               
-                                </div><!--//item-->
-                                
-                                <div class="item">
-                                    <h3 class="level-title">Javascript &amp; jQuery<span class="level-label" data-bs-toggle="tooltip" data-bs-placement="left" title="You can use the tooltip to explain more about your skill level..."><i class="fas fa-info-circle"></i>Expert</span></h3>
-                                    <div class="level-bar progress">
-									    <div class="progress-bar level-bar-inner" role="progressbar" style="width: 94%" aria-valuenow="94"  aria-valuemin="0" aria-valuemax="94"></div>
-									</div><!--//level-bar-->                                   
-                                </div><!--//item-->
-                                
-                                <div class="item">
-                                    <h3 class="level-title">HTML5, CSS3, SASS &amp; LESS<span class="level-label" data-bs-toggle="tooltip" data-bs-placement="left" title="You can use the tooltip to explain more about your skill level..."><i class="fas fa-info-circle"></i>Expert</span></h3>
-                                    <div class="level-bar progress">
-									    <div class="progress-bar level-bar-inner" role="progressbar" style="width: 93%" aria-valuenow="93"  aria-valuemin="0" aria-valuemax="96"></div>
-									</div><!--//level-bar-->                                  
-                                </div><!--//item-->
-                                
-                                <div class="item">
-                                    <h3 class="level-title">Ruby on Rails<span class="level-label" data-bs-toggle="tooltip" data-placement="left" title="You can use the tooltip to explain more about your skill level..."><i class="fas fa-info-circle"></i>Pro</span></h3>
-                                    <div class="level-bar progress">
-									    <div class="progress-bar level-bar-inner" role="progressbar" style="width: 86%" aria-valuenow="86"  aria-valuemin="0" aria-valuemax="96"></div>
-									</div><!--//level-bar-->                                  
-                                </div><!--//item-->
-                                
-                                <p><a class="more-link" href="#"><i class="fas fa-external-link-alt"></i>More on GitHub</a></p> 
-                            </div>              
-                        </div><!--//content-->  
-                    </div><!--//section-inner-->                 
-                </aside><!--//section-->
-                
-                <aside class="testimonials aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Testimonials</h2>
-                        <div class="content">
-                            <div class="item">
-                                <blockquote class="quote">                                  
-                                    <p><i class="fas fa-quote-left"></i>James is an excellent software engineer and he is passionate about what he does. You can totally count on him to deliver your projects!</p>
-                                </blockquote>                
-                                <p class="source"><span class="name">Tim Adams</span><br /><span class="title">Curabitur commodo</span></p>                                                             
-                            </div><!--//item-->
-                            
-                            <p><a class="more-link" href="#"><i class="fas fa-external-link-alt"></i>More on Linkedin</a></p> 
-                            
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </aside><!--//section-->
-                
-                <aside class="education aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Education</h2>
-                        <div class="content">
-                            <div class="item">                      
-                                <h3 class="title"><i class="fas fa-graduation-cap"></i> MSc Computer Science</h3>
-                                <h4 class="university">University College London <span class="year">(2017-2018)</span></h4>
-                            </div><!--//item-->
-                            <div class="item">
-                                <h3 class="title"><i class="fas fa-graduation-cap"></i> BSc Computer Science</h3>
-                                <h4 class="university">University of Bristol <span class="year">(2013-2017)</span></h4>
-                            </div><!--//item-->
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </aside><!--//section-->
-                            
-                <aside class="languages aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Languages</h2>
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li class="item">
-                                    <span class="title"><strong>English:</strong></span>
-                                    <span class="level">Native Speaker <br class="visible-xs"/><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> </span>
-                                </li><!--//item-->
-                                <li class="item">
-                                    <span class="title"><strong>Spanish:</strong></span>
-                                    <span class="level">Professional Proficiency <br class="visible-sm visible-xs"/><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star-half"></i></span>
-                                </li><!--//item-->
-                            </ul>
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </aside><!--//section-->
-                
-                <aside class="blog aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Latest Blog Posts</h2>
-                        <p>You can use Sascha Depold's <a href="https://github.com/sdepold/jquery-rss" target="_blank">Vanilla RSS plugin</a> to pull in your blog post feeds.</p>
-                        <div id="rss-feeds" class="content">
+            <button class="theme-toggle" type="button" aria-label="切换深色模式" aria-pressed="false">
+                <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
+                <span class="theme-icon theme-icon-moon" aria-hidden="true">☾</span>
+            </button>
+        </div>
+    </header>
 
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </aside><!--//section-->
-                
-                <aside class="list music aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Favourite coding music</h2>
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-headphones"></i> <a href="#">Etiam hendrerit urna nunc</a></li>
-                                <li><i class="fas fa-headphones"></i> <a href="#">Ut sollicitudin in mauris non auctor</a></li>
-                                <li><i class="fas fa-headphones"></i> <a href="#">Etiam hendrerit urna nunc</a></li>
-                                <li><i class="fas fa-headphones"></i> <a href="#">Duis et felis bibendum</a></li>
-                            </ul>
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </aside><!--//section-->
-                
-                <aside class="list conferences aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Conferences</h2>
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li><i class="far fa-calendar-alt"></i> <a href="#" target="_blank">WWDC 2030</a> (San Francisco)</li>
-                                <li><i class="far fa-calendar-alt"></i> <a href="#">Hive</a> (Seattle)</li>
-                            </ul>
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </aside><!--//section-->
-                
-                <aside class="credits aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Credits</h2>
-                        <div class="content">
-                            <ul class="list-unstyled pb-2">
-                                <li><a href="#" target="_blank"><i class="fas fa-external-link-alt"></i>Bootstrap</a></li>
-                                <li><a href="#" target="_blank"><i class="fas fa-external-link-alt"></i>FontAwesome</a></li>
-                                <li><a href="#" target="_blank"><i class="fas fa-external-link-alt"></i>GitHub Calendar Plugin</a></li>
-                                
-                                <li><a href="#" target="_blank"><i class="fas fa-external-link-alt"></i>GitHub Activity Stream</a></li>
-                                
-                                <li><a href="#" target="_blank"><i class="fas fa-external-link-alt"></i>Vanilla RSS</a></li>
-                                <li><a href="#"><i class="fas fa-external-link-alt"></i>Dark Mode Switch</a></li>
-                                
-                            </ul>
-                            
-                            <hr/>
-                            
-                             <p class="pt-2">This Boootstrap portfolio template is handcrafted by UX designer <a href="#" target="_blank">Xiaoying Riley</a> at <a href="#" target="_blank">3rd Wave Media</a> for developers and is <strong>FREE</strong> as long as you keep the footer attribution link.</p>
-                             <p>If you’d like to <strong>use this template without the attribution link</strong>, you can <a href="#" target="_blank">buy the commercial license</a>.</p>
-                             
-                             <a class="btn btn-cta-primary btn-download" href="#" target="_blank"><i class="fas fa-download"></i> I want to download</a>
-                            <hr/>
-                            <h5 class="subheading pt-3">Want more free Bootstrap themes and templates?</h5>
-                            <p>Check out our <a href="#">collection of free themes and templates.</a></p>
-                            <p>Follow <a href="#" target="_blank">Xiaoying</a> on twitter so you don't miss any future freebies!</p> 
-                            
-                            <a class="btn btn-cta-secondary btn-follow" href="#" target="_blank"><i class="fab fa-twitter"></i> Follow on twitter</a>
-                            
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </aside><!--//section-->
-              
-            </div><!--//secondary-->    
-        </div><!--//row-->
-    </div><!--//masonry-->
-    
-    <!-- ******FOOTER****** --> 
-    <footer class="footer">
-        <div class="container text-center">
-                <small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart"></i> by <a target="_blank" href="http://www.mobanwang.com" title="网页模板">网页模板</a> for developers</small>
-        </div><!--//container-->
-    </footer><!--//footer-->
- 
-    <!-- Javascript -->          
-    <script type="text/javascript" src="assets/plugins/popper.min.js"></script> 
-    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>    
-    <script type="text/javascript" src="assets/plugins/vanilla-rss/dist/rss.global.min.js"></script> 
-    <script type="text/javascript" src="assets/plugins/dark-mode-switch/dark-mode-switch.min.js"></script> 
-    <!-- github calendar plugin -->
-    <script type="text/javascript" src="assets/plugins/github-calendar/dist/github-calendar.min.js"></script>
-    <!-- github activity plugin -->
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/github-activity/src/github-activity.js"></script>
-    <!-- custom js -->
-    <script type="text/javascript" src="assets/js/main.js"></script>            
+    <main id="main-content">
+        <section class="hero game-hero" id="top" aria-labelledby="hero-title">
+            <div class="world-backdrop" aria-hidden="true"></div>
+            <div class="world-shade" aria-hidden="true"></div>
+            <div class="game-clouds" aria-hidden="true">
+                <span class="game-cloud cloud-one"></span>
+                <span class="game-cloud cloud-two"></span>
+                <span class="game-cloud cloud-three"></span>
+            </div>
+            <div class="world-particles" aria-hidden="true">
+                <i style="--x: 8%; --y: 31%; --d: 0s"></i>
+                <i style="--x: 19%; --y: 72%; --d: 1.6s"></i>
+                <i style="--x: 46%; --y: 25%; --d: 3.1s"></i>
+                <i style="--x: 62%; --y: 64%; --d: .8s"></i>
+                <i style="--x: 78%; --y: 34%; --d: 2.3s"></i>
+                <i style="--x: 91%; --y: 70%; --d: 4s"></i>
+            </div>
+
+            <div class="game-hud" aria-label="角色状态">
+                <div class="hud-player">
+                    <img src="assets/images/profile.png" alt="" width="44" height="44">
+                    <div class="hud-player-info">
+                        <div><strong>CookieBear</strong><span>LV. 30</span></div>
+                        <div class="hud-bar hp-bar"><i></i><span>HP</span></div>
+                        <div class="hud-bar mp-bar"><i></i><span>MP</span></div>
+                    </div>
+                </div>
+                <div class="hud-map" aria-label="当前位置">
+                    <span class="map-pin" aria-hidden="true">◆</span>
+                    <div><small>CURRENT AREA</small><strong>Cookie Valley</strong></div>
+                </div>
+            </div>
+
+            <div class="container game-stage">
+                <div class="hero-copy game-dialog reveal">
+                    <p class="quest-label"><span>!</span> NEW MAIN QUEST</p>
+                    <h1 id="hero-title">欢迎来到<br><span>CookieBear</span> 的开发世界</h1>
+                    <p class="hero-intro">我是熊振祥，一名游戏开发者。这里记录玩法系统、图形性能、工具链，以及把一个想法变成可玩体验的过程。</p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#writing">接受任务 <span aria-hidden="true">→</span></a>
+                        <a class="button button-secondary" href="https://github.com/xiongzhenxiang" target="_blank" rel="noopener noreferrer">查看装备 <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <div class="quest-reward" aria-label="任务奖励">
+                        <span>QUEST REWARD</span>
+                        <b>+ EXP</b> 游戏开发笔记
+                        <b>+ 3</b> 长期主题
+                    </div>
+                </div>
+
+                <div class="player-zone reveal" data-delay="120">
+                    <div class="quest-bubble">
+                        <span>!</span>
+                        <div><small>主线任务</small><strong>探索开发日志</strong></div>
+                    </div>
+                    <div class="companion-orb" aria-hidden="true"><i></i></div>
+                    <img class="player-character" src="assets/images/game/cookiebear-adventurer.png" alt="CookieBear 的冒险者形象" width="1024" height="1536">
+                    <div class="player-name"><span>◆</span> CookieBear <small>GAME DEV</small></div>
+                    <div class="player-shadow" aria-hidden="true"></div>
+                </div>
+            </div>
+
+            <div class="game-tip" aria-hidden="true"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd><span>移动视角</span><b>·</b><span>向下探索博客</span><i>↓</i></div>
+        </section>
+
+        <section class="ticker" aria-label="关注主题">
+            <div class="ticker-track">
+                <span>GAMEPLAY ENGINEERING</span><b>✦</b><span>GRAPHICS &amp; PERFORMANCE</span><b>✦</b><span>TOOLS &amp; PIPELINE</span><b>✦</b><span>AI FOR GAMES</span><b>✦</b><span>GAMEPLAY ENGINEERING</span><b>✦</b><span>GRAPHICS &amp; PERFORMANCE</span>
+            </div>
+        </section>
+
+        <section class="section writing-section" id="writing">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <div>
+                        <p class="section-index">01 / WRITING</p>
+                        <h2>我会在这里写什么</h2>
+                    </div>
+                    <p>不追热点，记录真正解决过的问题，也保留仍在思考中的答案。</p>
+                </div>
+
+                <div class="topic-grid">
+                    <article class="topic-card topic-card-featured reveal">
+                        <div class="topic-number">01</div>
+                        <div class="topic-icon" aria-hidden="true">⌘</div>
+                        <div class="topic-content">
+                            <p class="topic-kicker">GAMEPLAY ENGINEERING</p>
+                            <h3>玩法与系统</h3>
+                            <p>从角色控制、战斗手感到状态机与数值系统，拆解玩法背后的实现与取舍。</p>
+                            <div class="tag-list"><span>Gameplay</span><span>架构</span><span>手感</span></div>
+                        </div>
+                    </article>
+
+                    <article class="topic-card reveal" data-delay="80">
+                        <div class="topic-number">02</div>
+                        <div class="topic-icon" aria-hidden="true">✣</div>
+                        <div class="topic-content">
+                            <p class="topic-kicker">GRAPHICS &amp; PERFORMANCE</p>
+                            <h3>图形与性能</h3>
+                            <p>关注渲染效果、帧时间和性能分析，让画面表现与运行效率取得平衡。</p>
+                            <div class="tag-list"><span>Rendering</span><span>优化</span></div>
+                        </div>
+                    </article>
+
+                    <article class="topic-card reveal" data-delay="160">
+                        <div class="topic-number">03</div>
+                        <div class="topic-icon" aria-hidden="true">↯</div>
+                        <div class="topic-content">
+                            <p class="topic-kicker">TOOLS &amp; PIPELINE</p>
+                            <h3>工具与管线</h3>
+                            <p>编辑器扩展、资源管线与 AI 辅助开发，把重复工作变成可靠工具。</p>
+                            <div class="tag-list"><span>Tools</span><span>AI</span></div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="coming-soon reveal">
+                    <span class="coming-mark" aria-hidden="true">↳</span>
+                    <div>
+                        <p class="coming-label">UP NEXT</p>
+                        <h3>第一篇长文正在整理中</h3>
+                    </div>
+                    <p>把零散经验变成可复用的知识，需要一点时间。很快见。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section project-section" id="projects">
+            <div class="container project-grid">
+                <div class="project-copy reveal">
+                    <p class="section-index">02 / BUILDING</p>
+                    <h2>保持好奇，<br>持续构建。</h2>
+                    <p>比起展示一串技能进度条，我更愿意让作品说话。游戏原型、技术实验和开发工具，都会逐步沉淀在 GitHub。</p>
+                    <a class="text-link" href="https://github.com/xiongzhenxiang" target="_blank" rel="noopener noreferrer">查看我的 GitHub <span aria-hidden="true">↗</span></a>
+                </div>
+
+                <a class="github-card reveal" data-delay="120" href="https://github.com/xiongzhenxiang" target="_blank" rel="noopener noreferrer">
+                    <div class="github-topline">
+                        <span class="github-logo" aria-hidden="true">GH</span>
+                        <span class="arrow" aria-hidden="true">↗</span>
+                    </div>
+                    <div>
+                        <p>OPEN SOURCE &amp; SIDE PROJECTS</p>
+                        <h3>@xiongzhenxiang</h3>
+                    </div>
+                    <div class="code-lines" aria-hidden="true">
+                        <i style="--w: 74%"></i><i style="--w: 48%"></i><i style="--w: 86%"></i><i style="--w: 58%"></i>
+                    </div>
+                    <span class="github-cta">Follow the work →</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="section about-section" id="about">
+            <div class="container about-grid">
+                <div class="about-title reveal">
+                    <p class="section-index">03 / ABOUT</p>
+                    <h2>关于这个博客</h2>
+                </div>
+                <div class="about-copy reveal" data-delay="100">
+                    <p class="lead">这是一个游戏开发者的技术日志，也是长期维护的公开笔记本。</p>
+                    <p>我相信好游戏来自无数看不见的细节。这里不会只有最终方案，还会记录原型验证、性能排查、失败尝试和一次次迭代背后的思考。</p>
+                    <div class="principles">
+                        <span><b>01</b> 先做出可玩原型</span>
+                        <span><b>02</b> 用数据定位问题</span>
+                        <span><b>03</b> 在迭代中找答案</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>
+                <a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true"><img src="assets/images/profile.png" alt=""></span><span>CookieBear</span></a>
+                <p>记录、思考、持续构建。</p>
+            </div>
+            <div class="footer-links">
+                <a href="#writing">写作</a>
+                <a href="#projects">项目</a>
+                <a href="https://github.com/xiongzhenxiang" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+            <p class="copyright">© <span id="current-year">2026</span> 熊振祥<br><small>Based on the Developer theme by 3rd Wave Media.</small></p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
 </body>
-</html> 
-
+</html>

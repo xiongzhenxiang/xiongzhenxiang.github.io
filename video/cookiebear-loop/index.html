@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en" data-resolution="custom-4x3">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=4032, height=3024" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      :root {
+        --sky-blue: #55b9ee;
+        --forest-green: #2e6c45;
+        --sunlit-gold: #f6d36a;
+        --crystal-cyan: #53d7ff;
+        --deep-pine: #102e2b;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        width: 4032px;
+        height: 3024px;
+        overflow: hidden;
+        background: var(--deep-pine);
+      }
+
+      #root,
+      .scene,
+      .scene-content {
+        width: 100%;
+        height: 100%;
+      }
+
+      #root,
+      .scene {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .scene-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 0;
+        isolation: isolate;
+      }
+
+      .world-frame {
+        position: absolute;
+        z-index: -5;
+        inset: -160px;
+        overflow: hidden;
+        background: var(--sky-blue);
+        will-change: transform;
+      }
+
+      .world-bg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 54% 50%;
+        filter: saturate(1.06) contrast(1.01);
+      }
+
+      .sun-wash {
+        position: absolute;
+        z-index: -4;
+        inset: 0;
+        background:
+          radial-gradient(circle at 22% 18%, rgba(255, 249, 194, 0.34) 0, rgba(246, 211, 106, 0.1) 18%, transparent 43%),
+          linear-gradient(180deg, rgba(85, 185, 238, 0.04), rgba(16, 46, 43, 0.12));
+        will-change: opacity;
+      }
+
+      .cloud {
+        position: absolute;
+        z-index: -2;
+        width: 720px;
+        height: 160px;
+        border-radius: 999px;
+        background: rgba(244, 253, 250, 0.21);
+        filter: blur(22px);
+        will-change: transform, opacity;
+      }
+
+      .cloud::before,
+      .cloud::after {
+        position: absolute;
+        bottom: 12px;
+        border-radius: 50%;
+        background: inherit;
+        content: "";
+      }
+
+      .cloud::before {
+        left: 110px;
+        width: 280px;
+        height: 280px;
+      }
+
+      .cloud::after {
+        right: 80px;
+        width: 360px;
+        height: 360px;
+      }
+
+      .cloud-a {
+        top: 380px;
+        left: 230px;
+      }
+
+      .cloud-b {
+        top: 650px;
+        right: 120px;
+        opacity: 0.54;
+        transform: scale(0.64);
+      }
+
+      .character-wrap {
+        position: absolute;
+        z-index: 5;
+        right: 11%;
+        bottom: 9.5%;
+        height: 55%;
+        transform-origin: 50% 100%;
+        will-change: transform;
+      }
+
+      .character {
+        position: relative;
+        z-index: 2;
+        width: auto;
+        height: 100%;
+        filter: drop-shadow(0 42px 28px rgba(9, 32, 25, 0.3));
+      }
+
+      .character-shadow {
+        position: absolute;
+        z-index: 3;
+        right: 13.8%;
+        bottom: 8.6%;
+        width: 760px;
+        height: 108px;
+        border-radius: 50%;
+        background: rgba(10, 35, 27, 0.38);
+        filter: blur(38px);
+        will-change: transform, opacity;
+      }
+
+      .crystal-glow {
+        position: absolute;
+        z-index: 4;
+        top: 25%;
+        right: 1%;
+        width: 290px;
+        height: 290px;
+        border: 18px solid rgba(232, 254, 255, 0.72);
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(231, 254, 255, 0.92) 0 4%, rgba(83, 215, 255, 0.54) 24%, rgba(83, 215, 255, 0.08) 57%, transparent 70%);
+        filter: blur(9px) drop-shadow(0 0 56px var(--crystal-cyan));
+        mix-blend-mode: screen;
+        transform-origin: center;
+        will-change: transform, opacity;
+      }
+
+      .crystal-ray {
+        position: absolute;
+        z-index: 5;
+        top: calc(25% + 139px);
+        right: calc(1% + 139px);
+        width: 330px;
+        height: 3px;
+        border-radius: 99px;
+        background: rgba(238, 255, 255, 0.82);
+        box-shadow: 0 0 18px rgba(83, 215, 255, 0.9);
+        transform-origin: center;
+        will-change: transform, opacity;
+      }
+
+      .crystal-ray::after {
+        position: absolute;
+        inset: 0;
+        background: inherit;
+        content: "";
+        transform: rotate(90deg);
+      }
+
+      .companion {
+        position: absolute;
+        z-index: 6;
+        top: 40%;
+        right: 7.5%;
+        width: 190px;
+        height: 190px;
+        border: 12px solid rgba(234, 255, 255, 0.75);
+        border-radius: 50%;
+        background: radial-gradient(circle at 34% 30%, #f4ffff 0 7%, #7cecff 10%, #238fd9 48%, rgba(35, 143, 217, 0) 69%);
+        filter: drop-shadow(0 0 48px var(--crystal-cyan));
+        will-change: transform, opacity;
+      }
+
+      .companion::before,
+      .companion::after {
+        position: absolute;
+        top: 62px;
+        width: 92px;
+        height: 42px;
+        border-radius: 100% 0;
+        background: rgba(200, 251, 255, 0.7);
+        content: "";
+      }
+
+      .companion::before {
+        left: -94px;
+        transform: rotate(16deg);
+      }
+
+      .companion::after {
+        right: -94px;
+        transform: scaleX(-1) rotate(16deg);
+      }
+
+      .mote {
+        position: absolute;
+        z-index: 4;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: #efffa8;
+        box-shadow: 0 0 48px 15px rgba(207, 255, 126, 0.82);
+        will-change: transform, opacity;
+      }
+
+      .mote-a { top: 43%; left: 13%; }
+      .mote-b { top: 66%; left: 29%; transform: scale(0.68); }
+      .mote-c { top: 29%; left: 53%; transform: scale(0.45); }
+      .mote-d { top: 61%; right: 8%; transform: scale(0.78); }
+      .mote-e { top: 78%; left: 62%; transform: scale(0.5); }
+
+      .foreground-shade {
+        position: absolute;
+        z-index: 8;
+        inset: 0;
+        background:
+          radial-gradient(ellipse at center, transparent 52%, rgba(9, 34, 27, 0.17) 100%),
+          linear-gradient(0deg, rgba(8, 29, 24, 0.2), transparent 24%);
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="6"
+      data-width="4032"
+      data-height="3024"
+    >
+      <div
+        id="adventure-scene"
+        class="clip scene"
+        data-start="0"
+        data-duration="6"
+        data-track-index="0"
+        data-layout-allow-overflow
+      >
+        <div class="scene-content">
+          <div class="world-frame" data-layout-ignore>
+            <img class="world-bg" src="assets/adventure-world.jpg" alt="" />
+          </div>
+          <div class="sun-wash" data-layout-ignore></div>
+          <div class="cloud cloud-a" data-layout-ignore></div>
+          <div class="cloud cloud-b" data-layout-ignore></div>
+
+          <div class="character-shadow" data-layout-ignore></div>
+          <div class="character-wrap" data-layout-ignore>
+            <div class="crystal-glow"></div>
+            <div class="crystal-ray"></div>
+            <img class="character" src="assets/cookiebear-adventurer.png" alt="" />
+          </div>
+          <div class="companion" data-layout-ignore></div>
+
+          <i class="mote mote-a" data-layout-ignore></i>
+          <i class="mote mote-b" data-layout-ignore></i>
+          <i class="mote mote-c" data-layout-ignore></i>
+          <i class="mote mote-d" data-layout-ignore></i>
+          <i class="mote mote-e" data-layout-ignore></i>
+          <div class="foreground-shade" data-layout-ignore></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      tl.fromTo(
+        ".world-frame",
+        { x: -28, y: 8, scale: 1.035 },
+        { x: 28, y: -8, scale: 1.05, duration: 3, repeat: 1, yoyo: true, ease: "sine.inOut" },
+        0,
+      );
+      tl.fromTo(
+        ".sun-wash",
+        { opacity: 0.78 },
+        { opacity: 1, duration: 3, repeat: 1, yoyo: true, ease: "power1.inOut" },
+        0,
+      );
+      tl.fromTo(
+        ".cloud-a",
+        { x: -70, y: 0, opacity: 0.34 },
+        { x: 70, y: -14, opacity: 0.54, duration: 3, repeat: 1, yoyo: true, ease: "sine.inOut" },
+        0,
+      );
+      tl.fromTo(
+        ".cloud-b",
+        { x: 55, y: 10, opacity: 0.34 },
+        { x: -55, y: -12, opacity: 0.52, duration: 1.5, repeat: 3, yoyo: true, ease: "sine.inOut" },
+        0,
+      );
+      tl.fromTo(
+        ".character-wrap",
+        { y: 0, rotation: -0.25 },
+        { y: -22, rotation: 0.25, duration: 1.5, repeat: 3, yoyo: true, ease: "sine.inOut" },
+        0,
+      );
+      tl.fromTo(
+        ".character-shadow",
+        { scaleX: 1, opacity: 0.52 },
+        { scaleX: 0.91, opacity: 0.34, duration: 1.5, repeat: 3, yoyo: true, ease: "sine.inOut" },
+        0,
+      );
+      tl.fromTo(
+        ".crystal-glow",
+        { scale: 0.82, opacity: 0.48 },
+        { scale: 1.2, opacity: 0.96, duration: 1, repeat: 5, yoyo: true, ease: "sine.inOut" },
+        0,
+      );
+      tl.fromTo(
+        ".crystal-ray",
+        { scale: 0.62, opacity: 0.32, rotation: 0 },
+        { scale: 1.12, opacity: 0.88, rotation: 45, duration: 1, repeat: 5, yoyo: true, ease: "power1.inOut" },
+        0,
+      );
+      tl.fromTo(
+        ".companion",
+        { x: -18, y: 14, scale: 0.9, opacity: 0.72 },
+        { x: 18, y: -20, scale: 1.06, opacity: 1, duration: 1.5, repeat: 3, yoyo: true, ease: "sine.inOut" },
+        0,
+      );
+      tl.fromTo(
+        ".mote-a, .mote-d",
+        { y: 20, x: -10, opacity: 0.24, scale: 0.65 },
+        { y: -28, x: 18, opacity: 1, scale: 1.08, duration: 1.5, repeat: 3, yoyo: true, ease: "sine.inOut" },
+        0,
+      );
+      tl.fromTo(
+        ".mote-b, .mote-c, .mote-e",
+        { y: -14, x: 14, opacity: 0.3 },
+        { y: 24, x: -16, opacity: 0.9, duration: 1, repeat: 5, yoyo: true, ease: "power1.inOut" },
+        0,
+      );
+
+      window.__timelines.main = tl;
+    </script>
+  </body>
+</html>
